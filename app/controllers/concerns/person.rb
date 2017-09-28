@@ -3,22 +3,20 @@ class Person
 
   def initialize(name, age)
     @name = name
-    @age = age
+    @age = age.to_i
+    @nickname = name[0, 4]
   end
 
   def nickname
-    # YOUR IMPLEMENTATION HERE
-    'delete_me'
+    return @nickname
   end
 
   def birth_year
-    # YOUR IMPLEMENTATION HERE
-    1990
+    return 2017 - @age
   end
 
   def introduction
-    # YOUR IMPLEMENTATION HERE
-    'delete_me'
+    return @name + " is " + @age.to_s + " years old."
   end
 
 end
